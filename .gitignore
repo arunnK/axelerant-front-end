@@ -1,2 +1,4 @@
 dist
 node_modules
+src/.DS_Store
+package-lock.json

@@ -9,6 +9,7 @@ const babel = require('gulp-babel');
 const eslint = require('gulp-eslint');
 const stylelint = require('gulp-stylelint');
 const browserSync = require('browser-sync');
+const imagemin = require('gulp-imagemin');
 
 gulp.task('twig', () => {
   return gulp
@@ -39,6 +40,13 @@ gulp.task('stylelint', () => {
   );
 });
 
+gulp.task('images', () => {
+  return gulp
+    .src('src/assets/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/assets/images'));
+});
+
 gulp.task('babel', () => {
   return gulp
     .src('src/js/*.js')
@@ -66,7 +74,7 @@ gulp.task('browsersync', () => {
 });
 
 gulp.task('lint', gulp.parallel('stylelint', 'eslint'));
-gulp.task('build', gulp.parallel('twig', 'sass', 'babel'));
+gulp.task('build', gulp.parallel('twig', 'sass', 'babel', 'images'));
 gulp.task('server', gulp.series('build', gulp.parallel('browsersync')));
 
 gulp.task('default', gulp.series('lint', 'build'));

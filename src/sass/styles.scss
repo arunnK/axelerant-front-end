@@ -1,11 +1,91 @@
 @import 'config/**/*.scss';
 
+$orange-color: #ee3b00;
+
 html {
   height: 100%;
   font-size: 16px;
 }
 
 body {
-  font-size: 100%;
-  display: flex;
+  font-family: sans-serif;
+
+  .navbar {
+    display: flex;
+    background-color: #171513;
+    padding: 16px;
+    color: white;
+
+    .navbar-items {
+      display: flex;
+
+      .navbar-link {
+        padding: 8px 15px;
+      }
+
+      .navbar-menu-button {
+        display: none;
+      }
+
+      .company-logo {
+        padding: 8px;
+      }
+
+      .get-in-touch {
+        background-color: $orange-color;
+        border: solid 1px $orange-color;
+        border-radius: 25px;
+      }
+
+      .chat-icon {
+        display: none;
+      }
+    }
+
+    .navbar-items-right {
+      margin-left: auto;
+    }
+
+    .orange-color-text {
+      color: $orange-color;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      .navbar-items {
+        flex-direction: column;
+        .navbar-menu-button {
+          align-self: flex-start;
+          display: initial;
+          position: absolute;
+          cursor: pointer;
+        }
+
+        .company-logo {
+          align-self: center;
+        }
+
+        .get-in-touch {
+          display: none;
+        }
+
+        .chat-icon {
+          align-self: flex-end;
+          display: initial;
+          margin-top: -24px;
+        }
+      }
+
+      .navbar-toggle-show {
+        display: flex !important;
+      }
+
+      .navbar-items-right {
+        margin-left: 0;
+        display: none;
+      }
+    }
+  }
 }
