@@ -1,0 +1,23 @@
+.about-section {
+  .about-container {
+    display: flex;
+    padding: 50px;
+    color: $text-grey;
+
+    .about-left-panel {
+      flex: 1 1 50%;
+      font-size: 1.5rem;
+      line-height: 32px;
+    }
+    .about-right-panel {
+      flex: 1 1 50%;
+      align-self: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+}
