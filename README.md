@@ -1,7 +1,5 @@
 # Interview: Front-end
 
-- Deployed at: https://arunnk.github.io/axelerant-front-end/
-
 ### Setup Prerequisites
 
 - [Node.js](https://nodejs.org/en/)
@@ -17,4 +15,3 @@
 
 - Run `gulp` to build the project
 - Run `gulp server` to run the server
-- Run `gulp deploy` to deploy at gh-pages
