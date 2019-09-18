@@ -1,5 +1,7 @@
 # Interview: Front-end
 
+- Deployed on: https://arunnk.github.io/axelerant-front-end/
+
 ### Background
 
 This exercise is to test your Front-end skills. In this repository you will find:
