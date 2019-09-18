@@ -1,16 +1,17 @@
+"use strict";
+
 (function global($) {
   function menuToggle() {
-    const navs = document.querySelectorAll('.navbar-items-right');
-
-    navs.forEach(nav => nav.classList.toggle('navbar-toggle-show'));
+    var navs = document.querySelectorAll('.navbar-items-right');
+    navs.forEach(function (nav) {
+      return nav.classList.toggle('navbar-toggle-show');
+    });
   }
 
-  document
-    .querySelector('.navbar-menu-button')
-    .addEventListener('click', menuToggle);
-
-  $(document).ready(function($) {
+  document.querySelector('.navbar-menu-button').addEventListener('click', menuToggle);
+  $(document).ready(function ($) {
     'use strict';
+
     $('#client-testimonials').owlCarousel({
       loop: true,
       center: true,

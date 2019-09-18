@@ -1,0 +1,7 @@
+.footer .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #171513;
+  padding: 16px;
+  color: white; }
