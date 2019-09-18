@@ -1,0 +1,15 @@
+<section class="testimonials">
+    {% set testmonial_text = "Tempus imperdiet nulla malesuada pellentesque elit eget. Suscipit tellus mauris a diam maecenas sed enim ut sem. 
+                Suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque.
+                Montes nascetur ridiculus mus mauris vitae ultricies leo integer. 
+                Aliquam sem et tortor consequat id porta nibh venenatis cras. " %}
+
+    <div class="testimonials-container">
+    <h2 class="testimonial-header">Testimonials</h2>
+        <div id="client-testimonials" class="owl-carousel">
+            {% include '../atoms/testimonial.html.twig' with {text: testmonial_text, name:"Sunder Pichai", position: "CEO", org: "Google"} %}
+            {% include '../atoms/testimonial.html.twig' with {text: testmonial_text, name:"Jeff Henry", position: "CTO", org: "CrowdFund"} %}
+            {% include '../atoms/testimonial.html.twig' with {text: testmonial_text, name:"Kunal Kapoor", position: "CEO", org: "Crypter"} %}
+        </div>
+    </div>
+</section>

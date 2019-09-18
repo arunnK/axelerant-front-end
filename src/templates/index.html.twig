@@ -4,6 +4,8 @@
     <title>Axelerant: Interview Frontend</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css'>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 </head>
 <body>
     <!--header-->
@@ -12,6 +14,12 @@
     {% include "./molecules/landing-banner.html.twig" %}
     <!--about-->
     {% include "./molecules/about.html.twig" %}
-
+    <!--testimonials-->
+    {% include "./molecules/testimonials.html.twig" %}
+    <!--getInTouch-->
+    {% include "./molecules/get-in-touch.html.twig" %}
+    <!--footer-->
+    {% include "./molecules/footer.html.twig" %}
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js'></script>
     <script src="main.js"></script>
 </body>

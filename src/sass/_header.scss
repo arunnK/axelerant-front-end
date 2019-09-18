@@ -2,15 +2,44 @@
   display: flex;
   background-color: #171513;
   padding: 16px;
-  color: white;
+  color: $text-grey;
   position: fixed;
   width: 100%;
+  z-index: 50;
 
   .navbar-items {
     display: flex;
 
     .navbar-link {
       padding: 8px 15px;
+    }
+
+    .navbar-link:hover {
+      color: white;
+    }
+
+    .navbar-link div {
+      display: none;
+      background-color: #171513;
+      border-top: 3px solid $orange-color;
+      text-decoration: none;
+      list-style: none;
+    }
+
+    .navbar-link div p a {
+      text-decoration: none;
+      color: $text-grey;
+      padding: 3px;
+    }
+
+    .navbar-link div p a:hover {
+      color: white;
+    }
+
+    .navbar-link:hover div {
+      position: absolute;
+      display: block;
+      z-index: 1;
     }
 
     .navbar-menu-button {
@@ -25,6 +54,7 @@
       background-color: $orange-color;
       border: solid 1px $orange-color;
       border-radius: 25px;
+      color: white;
     }
 
     .chat-icon {
