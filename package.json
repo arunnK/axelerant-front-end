@@ -6,7 +6,9 @@
   "author": "Bassam Ismail <skippednote@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "deploy": "gh-pages -d build",
+    "build": "gulp"
   },
   "lint-staged": {
     "src/**/*.js": "eslint",
@@ -25,6 +27,7 @@
     "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-eslint": "^5.0.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^6.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",

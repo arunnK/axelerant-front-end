@@ -10,6 +10,7 @@ const eslint = require('gulp-eslint');
 const stylelint = require('gulp-stylelint');
 const browserSync = require('browser-sync');
 const imagemin = require('gulp-imagemin');
+const deploy = require('gulp-gh-pages');
 
 gulp.task('twig', () => {
   return gulp
@@ -71,6 +72,13 @@ gulp.task('browsersync', () => {
     ['src/sass/**/*.scss', 'src/js/*.js'],
     gulp.series('build', browserSync.reload)
   );
+});
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', () => {
+  return gulp.src('./dist/**/*').pipe(deploy());
 });
 
 gulp.task('lint', gulp.parallel('stylelint', 'eslint'));
